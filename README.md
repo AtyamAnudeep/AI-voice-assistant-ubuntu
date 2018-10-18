@@ -1,2 +1,4 @@
 # AI-voice-assistant-ubuntu
-An assistant which talks to you and helps you to open various websites.
+
+Used various python libraries like gtts, speech_recognition, etc..
+An assistant which talks to you and also helps you to open facebook, youtube, github and other websites on voice activation.
