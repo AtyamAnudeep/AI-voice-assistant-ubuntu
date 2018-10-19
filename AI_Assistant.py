@@ -13,7 +13,7 @@ def talkToDeepu(audio):
 def DeepsCommand():
 	r = sr.Recognizer()
 	with sr.Microphone() as source:
-		print('what is ur next command')
+		print('what is your next command')
 		r.pause_threshold=1
 		r.adjust_for_ambient_noise(source,duration=1)
 		audio = r.listen(source)
@@ -31,11 +31,22 @@ def assistant(command):
 		chrome_path = '/usr/bin/google-chrome'
 		url = 'https://www.facebook.com'
 		webbrowser.get(chrome_path).open(url)
+		
+	if 'open Youtube' in command:
+		chrome_path = '/usr/bin/google-chrome'
+		url = 'https://www.youtube.com'
+		webbrowser.get(chrome_path).open(url)
+
+	if 'open Github' in command:
+		chrome_path = '/usr/bin/google-chrome'
+		url = 'https://www.github.com'
+		webbrowser.get(chrome_path).open(url)
 
 	if 'hello' in command:
 		talkToDeepu('hello anudeep')
+	
 
-talkToDeepu('what is ur next command')
+talkToDeepu('what is your next command')
 
 while True:
 	assistant(DeepsCommand())	 	 				
